@@ -97,7 +97,7 @@ class Tablero  {
 		for(var i=8 ; i>0 ; i--){
 			document.writeln('<tr>');
 			for(var j=0; j<8 ; j++){
-				document.write('<td>');
+				document.write('<td height="40">');
 				idx = letra[j]+i;
 				document.write(this.casilla[idx].despliega());
 				document.writeln('</td>');
