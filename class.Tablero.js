@@ -1,8 +1,8 @@
 class Tablero  {
 
 	constructor(unaPartida) {
-		this.colorCasillaClara ="#eeeeee";
-		this.colorCasillaOscura = "#444444";
+		this.colorCasillaClara ="#eeeeff";
+		this.colorCasillaOscura = "#4444AA";
 		this.colorPiezaClara = "#a2a2a2";
 		this.colorPiezaOscura = "#666690";
 		this.casilla = new Array();
@@ -86,18 +86,22 @@ class Tablero  {
 	}
 
 	despliega_tabla_html() {
-		var idx;
+		var idx,col;
 		var letra = ['a','b','c','d','e','f','g','h'];
 		document.writeln('<table border="1" style="text-align:center">');
 		document.writeln('<tr>');
 		for(var i=0 ; i<8 ; i++){
 			document.writeln('<td height="40" width="40">'+letra[i]+'</td>');
 		}
-		document.writeln('<td></td></tr>');
+		document.writeln('<td width="20"></td></tr>');
 		for(var i=8 ; i>0 ; i--){
 			document.writeln('<tr>');
 			for(var j=0; j<8 ; j++){
-				document.write('<td height="40">');
+				if((i+j)%2==0)
+					col = this.colorCasillaClara;
+				else
+					col = this.colorCasillaOscura;
+				document.write('<td height="40" style="background-color:'+col+'">');
 				idx = letra[j]+i;
 				document.write(this.casilla[idx].despliega());
 				document.writeln('</td>');
