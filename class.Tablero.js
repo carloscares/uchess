@@ -66,7 +66,7 @@ class Tablero  {
 			idx = letra[k]+2;
 			obj = new Peon(BLANCO,this);
 			this.casilla[idx].ocupar(obj);
-			idx = letra[k]*7;
+			idx = letra[k]+7;
 			obj = new Peon(NEGRO,this);
 			this.casilla[idx].ocupar(obj);
 		}
