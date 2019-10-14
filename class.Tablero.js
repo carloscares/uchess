@@ -89,6 +89,11 @@ class Tablero  {
 		var idx;
 		var letra = ['a','b','c','d','e','f','g','h'];
 		document.writeln('<table border="1">');
+		document.writeln('<tr>');
+		for(var i=0 ; i<8 ; i++){
+			document.writeln('<td height="40" width="40">'+letra[i-1]+'</td>');
+		}
+		document.writeln('<td></td></tr>');
 		for(var i=8 ; i>0 ; i--){
 			document.writeln('<tr>');
 			for(var j=0; j<8 ; j++){
@@ -97,8 +102,13 @@ class Tablero  {
 				document.write(this.casilla[idx].despliega());
 				document.writeln('</td>');
 			}
-			document.writeln('</tr>');
+			document.writeln('<td>'+i+'</td></tr>');
 		}
+		document.writeln('<tr>');
+		for(var i=0 ; i<8 ; i++){
+			document.writeln('<td height="40">'+letra[i-1]+'</td>');
+		}
+		document.writeln('<td></td></tr>');
 		document.writeln('</table>')
 	}
 }
