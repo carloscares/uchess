@@ -4,7 +4,7 @@ class Partida  {
 	constructor() {
 		this.jugadorB="";
 		this.jugadorN="";
-		this.tablero = [new Tablero()];
+		this.tablero = [new Tablero(this)];
 		this.turno = "Blanca";
 		this.jugadaActual = 0;
 	}
