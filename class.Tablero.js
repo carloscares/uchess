@@ -88,7 +88,7 @@ class Tablero  {
 	despliega_tabla_html() {
 		var idx;
 		var letra = ['a','b','c','d','e','f','g','h'];
-		document.writeln('<table border="1">');
+		document.writeln('<table border="1" style="text-align:center">');
 		document.writeln('<tr>');
 		for(var i=0 ; i<8 ; i++){
 			document.writeln('<td height="40" width="40">'+letra[i]+'</td>');
