@@ -18,22 +18,35 @@ class Casilla {
         }
         return condicion;
     }
-    ocuparCasilla(pieza) {
+    ocupar(objetoPieza) {
         if (this.estaVacia() == true) {
-            this.pieza = pieza;
-            alert("Se ha agregado la pieza");
+            this.pieza = objetoPieza;
+            //alert("Se ha agregado la pieza");
         }
         else {
-            alert("Casilla ocupada");
+            //alert("Casilla ocupada");
         }
     }
+
+    vaciar() {
+        this.pieza="";
+    }
+
     estaVacia() {
-        var condicion = false;
-        if (this.pieza == "") {
-            condicion = true;
+        return this.pieza == ""
+    }
+
+
+    //abstract
+    despliega() {
+        if(this.estaVacia()){
+            return '';
         }
-        return condicion;
+        else {
+            return this.pieza.despliega();
+        }        
     }
 
 
 }
+

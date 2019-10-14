@@ -10,8 +10,6 @@ class Partida  {
 	}
 
 	registra_proxima_movida(origen,destino){
-
-
 	}
 
 	juegaBlanca() {
@@ -30,6 +28,11 @@ class Partida  {
 			this.turno = 'Negra';
 		else
 			this.turno = 'Blanca';
+	}
+
+	tableroActual() {
+		var n = this.tablero.length - 1;
+		return this.tablero[n];
 	}
 
 }
