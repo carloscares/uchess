@@ -84,7 +84,7 @@ class Tablero  {
 		this.despliega_tabla_html();
 	}
 
-	desliega_tabla_html() {
+	despliega_tabla_html() {
 		var idx;
 		var letra = ['a','b','c','d','e','f','g','h'];
 		document.writeln('<table border="1">');
