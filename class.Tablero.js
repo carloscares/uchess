@@ -81,7 +81,7 @@ class Tablero  {
 	}
 
 	despliega(){
-		despliega_tabla_html();
+		this.despliega_tabla_html();
 	}
 
 	desliega_tabla_html() {
