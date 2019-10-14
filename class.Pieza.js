@@ -1,9 +1,9 @@
 
-class Pieza{
+class Pieza {
 
-    constructor(trueSiBlanca, casillaActual){
+    constructor(trueSiBlanca, casillaContenedora){
         this.color = trueSiBlanca;
-        this.casillaActual = casillaActual;
+        this.casillaActual = casillaContenedora;
         this.yaMovido = false;
     }
 
@@ -32,7 +32,16 @@ class Pieza{
         return this.yaMovido;
     }
 
+    esBlanca(){
+        return this.esBlanco();
+    }
+
+    esNegra() {
+        return this.esNegro();
+    }
+
     obtenerCasilla(){
         return this.casillaActual;
     }
 }
+
