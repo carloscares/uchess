@@ -91,7 +91,7 @@ class Tablero  {
 		document.writeln('<table border="1">');
 		document.writeln('<tr>');
 		for(var i=0 ; i<8 ; i++){
-			document.writeln('<td height="40" width="40">'+letra[i-1]+'</td>');
+			document.writeln('<td height="40" width="40">'+letra[i]+'</td>');
 		}
 		document.writeln('<td></td></tr>');
 		for(var i=8 ; i>0 ; i--){
@@ -106,7 +106,7 @@ class Tablero  {
 		}
 		document.writeln('<tr>');
 		for(var i=0 ; i<8 ; i++){
-			document.writeln('<td height="40">'+letra[i-1]+'</td>');
+			document.writeln('<td height="40">'+letra[i]+'</td>');
 		}
 		document.writeln('<td></td></tr>');
 		document.writeln('</table>')
