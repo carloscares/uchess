@@ -1,6 +1,7 @@
 class Casilla {
-    constructor(id) {
+    constructor(id, tablero) {
         this.id = id;
+        this.tablero=tablero;
         this.pieza = "";
     }
     ocupadaBlanco() {
