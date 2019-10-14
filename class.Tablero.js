@@ -70,6 +70,7 @@ class Tablero  {
 			obj = new Peon(NEGRO,this);
 			this.casilla[idx].ocupar(obj);
 		}
+		console.log('a7?? '+this.casilla['a7'].despliega());
 
 
 
@@ -93,6 +94,7 @@ class Tablero  {
 			for(var j=0; j<=8 ; j++){
 				document.write('<td>');
 				idx = letra[j]+i;
+				console.log('a escribir '+idx);
 				document.write(this.casilla[idx].despliega());
 				document.writeln('</td>');
 			}
