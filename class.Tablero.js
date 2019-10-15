@@ -46,13 +46,14 @@ class Tablero  {
 		//peones ambos bandos
 		var idx;
 		var letra = ['a','b','c','d','e','f','g','h'];
-		for(var k=0; k<letra.length ; k++){
-			idx = letra[k]+2;
-			obj = new Peon(BLANCO,this.casilla[idx]);
-			idx = letra[k]+7;
-obj = new Peon(NEGRO,this.casilla[idx]);
-		}
 
+		for(var k=0; k<letra.length ; k++){
+            idx = letra[k]+2;
+            obj = new Peon(BLANCO,this.casilla[idx]);
+            idx = letra[k]+7;
+            obj = new Peon(NEGRO,this.casilla[idx]);
+        }
+		obj= new Peon(NEGRA,this.casilla['e6']);
 
 
 
@@ -63,7 +64,8 @@ obj = new Peon(NEGRO,this.casilla[idx]);
 
 	}
     jugadasTorre(){
-		this.casilla["c6"].pieza.puedeJugar();
+
+		return this.casilla["c6"].pieza.puedeJugar();
 	}
 	despliega(){
 		this.despliega_tabla_html();

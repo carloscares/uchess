@@ -91,9 +91,11 @@ class Torre extends Pieza {
 				jugadas.push(posiblesPosiciones4[i]);
 			}
 			else {
-				if (condicion != tablero.casilla[posiblesPosiciones4[i]].esBlanco()) {
+				
+				if (condicion != tablero.casilla[posiblesPosiciones4[i]].pieza.esBlanco()) {
 					jugadas.push(posiblesPosiciones4[i]);
 				}
+			
 				break;
 			}
 		}
