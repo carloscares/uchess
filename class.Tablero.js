@@ -15,6 +15,7 @@ class Tablero  {
 			}
 		this.ponePiezasIniciales();
 	}
+	
 
 	ponePiezasIniciales() {
 		//falta
