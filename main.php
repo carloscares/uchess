@@ -38,7 +38,7 @@ document.writeln();
 </head>
 
 <body>
-	<input id="casilla" value="coord pieza" type="text">
+	<input id="casilla" value="e4" type="text">
 	<input id="click" value="Check!" type="button" onclick="check()">
 	<textarea id="text"></textarea>
 </body>
