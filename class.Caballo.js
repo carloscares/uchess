@@ -33,8 +33,8 @@ class Caballo extends Pieza {
 		let index_x_3 = letters[letters.indexOf(x_pos) - 1];
 		let index_y_3 = numbers[numbers.indexOf(y_pos) - 2];
 
-		let index_x_1 = letters[letters.indexOf(x_pos) + 1];
-		let index_y_1 = numbers[numbers.indexOf(y_pos) - 2];
+		let index_x_4 = letters[letters.indexOf(x_pos) + 1];
+		let index_y_4 = numbers[numbers.indexOf(y_pos) - 2];
 
 		let pos_1 = index_x_1 + index_y_1;
 		let pos_2 = index_x_2 + index_y_2;

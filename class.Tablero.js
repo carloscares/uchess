@@ -116,4 +116,3 @@ class Tablero  {
 		document.writeln('</table>')
 	}
 }
-
