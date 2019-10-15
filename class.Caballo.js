@@ -143,5 +143,6 @@ class Caballo extends Pieza {
 		
 
 		console.log(ret);
+		return ret;
 	}
 }
