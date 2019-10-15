@@ -17,4 +17,19 @@ include_once 'class.Rey.js';
 
 tab = new Partida('juan','alberto');
 tab.tableroActual().despliega();
+console.log(tab.tableroActual().casilla["d4"].pieza.puedeJugar());
+
+function posibles(){
+    
+    document.getElementById("posibles").innerText = tab.tableroActual().casilla["d4"].pieza.puedeJugar().toString();
+}
 </script>
+
+<body>
+
+<input type="button" value="cllick" onclick="posibles()">
+
+<div id="posibles">
+</div>
+
+</body>

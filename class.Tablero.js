@@ -14,7 +14,6 @@ class Tablero {
 				this.casilla[idx] = new Casilla(idx, this);
 			}
 		this.ponePiezasIniciales();
-		console.log(this.casilla);
 	}
 
 	ponePiezasIniciales() {
@@ -25,8 +24,8 @@ class Tablero {
 		const NEGRO = false;
 
 		//piezas Blancas 
-		var obj = new Torre(BLANCA, this);
-		this.casilla['a1'].ocupar(obj);
+		var obj = new Torre(BLANCA, this.casilla['d4']);
+		this.casilla['d4'].ocupar(obj);
 		obj = new Caballo(BLANCO, this);
 		this.casilla['b1'].ocupar(obj);
 		obj = new Alfil(BLANCO, this);
