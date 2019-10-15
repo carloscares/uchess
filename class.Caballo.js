@@ -26,58 +26,58 @@ class Caballo extends Pieza {
 
 		let index_x_1;
 		let index_y_1;
-		if (letters.indexOf(x_pos) - 1 > 0 && numbers.indexOf(y_pos) + 2 < 8) {
+		if (letters.indexOf(x_pos) - 1 >= 0 && numbers.indexOf(y_pos) + 2 <= 8) {
 			index_x_1 = letters[letters.indexOf(x_pos) - 1];
 			index_y_1 = numbers[numbers.indexOf(y_pos) + 2];
 		}
 		
 		let index_x_2;
 		let index_y_2;
-		if (letters.indexOf(x_pos) + 1 < 8 && numbers.indexOf(y_pos) + 2 < 8) {
+		if (letters.indexOf(x_pos) + 1 <= 8 && numbers.indexOf(y_pos) + 2 <= 8) {
 			index_x_2 = letters[letters.indexOf(x_pos) + 1];
 			index_y_2 = numbers[numbers.indexOf(y_pos) + 2];
 		}
 
 		let index_x_3;
 		let index_y_3;
-		if (letters.indexOf(x_pos) - 1 > 0 && numbers.indexOf(y_pos) - 2 > 0) {
+		if (letters.indexOf(x_pos) - 1 >= 0 && numbers.indexOf(y_pos) - 2 >= 0) {
 			index_x_3 = letters[letters.indexOf(x_pos) - 1];
 			index_y_3 = numbers[numbers.indexOf(y_pos) - 2];
 		}
 
 		let index_x_4;
 		let index_y_4;
-		if (letters.indexOf(x_pos) + 1 < 8 && numbers.indexOf(y_pos) - 2 > 0) {
+		if (letters.indexOf(x_pos) + 1 <= 8 && numbers.indexOf(y_pos) - 2 >= 0) {
 			index_x_4 = letters[letters.indexOf(x_pos) + 1];
 			index_y_4 = numbers[numbers.indexOf(y_pos) - 2];
 		}
 
 		let index_x_5;
 		let index_y_5;
-		if (letters.indexOf(x_pos) + 2 < 8 && numbers.indexOf(y_pos) - 1 > 0) {
+		if (letters.indexOf(x_pos) + 2 <= 8 && numbers.indexOf(y_pos) - 1 >= 0) {
 			index_x_5 = letters[letters.indexOf(x_pos) + 2];
 			index_y_5 = numbers[numbers.indexOf(y_pos) - 1];
 		}
 
 		let index_x_6;
 		let index_y_6;
-		if (letters.indexOf(x_pos) + 2 < 8 && numbers.indexOf(y_pos) - 1 > 0) {
+		if (letters.indexOf(x_pos) + 2 <= 8 && numbers.indexOf(y_pos) + 1 <= 8) {
 			index_x_6 = letters[letters.indexOf(x_pos) + 2];
-			index_y_6 = numbers[numbers.indexOf(y_pos) - 1];
+			index_y_6 = numbers[numbers.indexOf(y_pos) + 1];
 		}
 
 		let index_x_7;
 		let index_y_7;
-		if (letters.indexOf(x_pos) + 2 < 8 && numbers.indexOf(y_pos) - 1 > 0) {
-			index_x_7 = letters[letters.indexOf(x_pos) + 2];
+		if (letters.indexOf(x_pos) - 2 >= 0 && numbers.indexOf(y_pos) - 1 >= 0) {
+			index_x_7 = letters[letters.indexOf(x_pos) - 2];
 			index_y_7 = numbers[numbers.indexOf(y_pos) - 1];
 		}
 
 		let index_x_8;
 		let index_y_8;
-		if (letters.indexOf(x_pos) + 2 < 8 && numbers.indexOf(y_pos) - 1 > 0) {
-			index_x_8 = letters[letters.indexOf(x_pos) + 2];
-			index_y_8 = numbers[numbers.indexOf(y_pos) - 1];
+		if (letters.indexOf(x_pos) - 2 >= 0 && numbers.indexOf(y_pos) + 1 <= 8) {
+			index_x_8 = letters[letters.indexOf(x_pos) - 2];
+			index_y_8 = numbers[numbers.indexOf(y_pos) + 1];
 		}
 
 
