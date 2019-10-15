@@ -15,20 +15,40 @@ include_once 'class.Dama.js';
 include_once 'class.Rey.js';
 ?>
 
-tab = new Partida('juan','alberto');
+var tab = new Partida('juan','alberto');
 tab.tableroActual().despliega();
-console.log(tab.tableroActual().casilla["a1"].pieza.puedeJugar());
 
 function posibles(){
-    
-    document.getElementById("posibles").innerText = tab.tableroActual().casilla['h4'].pieza.puedeJugar().toString();
+    let casilla = document.getElementById('casilla').value;
+    regenerar();
+    if (!(tab.tableroActual().casilla[casilla].pieza instanceof Torre)) {
+        return;
+    }
+    let posiblesJugadas = tab.tableroActual().casilla[casilla].pieza.puedeJugar();
+
+    for (let i = 0; i < posiblesJugadas.length; i++){
+        document.getElementById(posiblesJugadas[i]).style.backgroundColor = "orange";
+    }
+
+    document.getElementById("posibles").innerText = tab.tableroActual().casilla[casilla].pieza.puedeJugar().toString();
+}
+
+function regenerar(){
+    document.body.innerHTML = "";
+    tab.tableroActual().despliega();
+    document.write(`<input type="button" value="Comprobar Movimientos" onclick="posibles()">
+
+<input type="text" id="casilla" placeholder="c4">
+<div id="posibles">
+</div>`);
 }
 </script>
 
 <body>
 
-<input type="button" value="cllick" onclick="posibles()">
+<input type="button" value="Comprobar Movimientos" onclick="posibles()">
 
+<input type="text" id="casilla" placeholder="c4">
 <div id="posibles">
 </div>
 

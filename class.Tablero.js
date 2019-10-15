@@ -24,39 +24,39 @@ class Tablero {
 		const NEGRO = false;
 
 		//piezas Blancas 
-		var obj = new Torre(BLANCA, this.casilla['h4']);
-		this.casilla['h4'].ocupar(obj);
-		obj = new Caballo(BLANCO, this);
+		var obj = new Torre(BLANCA, this.casilla['g4']);
+		this.casilla['g4'].ocupar(obj);
+		obj = new Caballo(BLANCO, this.casilla['b1']);
 		this.casilla['b1'].ocupar(obj);
-		obj = new Alfil(BLANCO, this);
+		obj = new Alfil(BLANCO, this.casilla['c1']);
 		this.casilla['c1'].ocupar(obj);
-		obj = new Dama(BLANCA, this);
+		obj = new Dama(BLANCA, this.casilla['d1']);
 		this.casilla['d1'].ocupar(obj);
-		obj = new Rey(BLANCO, this);
+		obj = new Rey(BLANCO, this.casilla['e1']);
 		this.casilla['e1'].ocupar(obj);
-		obj = new Alfil(BLANCO, this);
+		obj = new Alfil(BLANCO, this.casilla['f1']);
 		this.casilla['f1'].ocupar(obj);
-		obj = new Caballo(BLANCO, this);
+		obj = new Caballo(BLANCO, this.casilla['g1']);
 		this.casilla['g1'].ocupar(obj);
-		obj = new Torre(BLANCA, this);
+		obj = new Torre(BLANCA, this.casilla['h1']);
 		this.casilla['h1'].ocupar(obj);
 
 		//piezas Negras
-		var obj = new Torre(NEGRA, this);
-		this.casilla['a8'].ocupar(obj);
-		obj = new Caballo(NEGRO, this);
+		var obj = new Torre(NEGRA, this.casilla['c5']);
+		this.casilla['c5'].ocupar(obj);
+		obj = new Caballo(NEGRO, this.casilla['b8']);
 		this.casilla['b8'].ocupar(obj);
-		obj = new Alfil(NEGRO, this);
+		obj = new Alfil(NEGRO, this.casilla['c8']);
 		this.casilla['c8'].ocupar(obj);
-		obj = new Dama(NEGRA, this);
+		obj = new Dama(NEGRA, this.casilla['d8']);
 		this.casilla['d8'].ocupar(obj);
-		obj = new Rey(NEGRO, this);
+		obj = new Rey(NEGRO, this.casilla['e8']);
 		this.casilla['e8'].ocupar(obj);
-		obj = new Alfil(NEGRO, this);
+		obj = new Alfil(NEGRO, this.casilla['f8']);
 		this.casilla['f8'].ocupar(obj);
-		obj = new Caballo(NEGRO, this);
+		obj = new Caballo(NEGRO, this.casilla['g8']);
 		this.casilla['g8'].ocupar(obj);
-		obj = new Torre(NEGRA, this);
+		obj = new Torre(NEGRA, this.casilla['h8']);
 		this.casilla['h8'].ocupar(obj);
 
 		//peones ambos bandos
@@ -64,16 +64,14 @@ class Tablero {
 		var letra = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
 		for (var k = 0; k < letra.length; k++) {
 			idx = letra[k] + 2;
-			obj = new Peon(BLANCO, this);
+			obj = new Peon(BLANCO, this.casilla[idx]);
 			this.casilla[idx].ocupar(obj);
 			idx = letra[k] + 7;
-			obj = new Peon(NEGRO, this);
+			obj = new Peon(NEGRO, this.casilla[idx]);
 			this.casilla[idx].ocupar(obj);
 		}
 
-
 		this.casilla['d2'].vaciar();
-
 
 		return true;
 	}
@@ -102,8 +100,8 @@ class Tablero {
 					col = this.colorCasillaClara;
 				else
 					col = this.colorCasillaOscura;
-				document.write('<td height="40" style="background-color:' + col + '">');
 				idx = letra[j] + i;
+				document.write(`<td id="${this.casilla[idx].id}" height="40" style="background-color:` + col + '">');
 				document.write(this.casilla[idx].despliega());
 				document.writeln('</td>');
 			}
