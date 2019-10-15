@@ -18,17 +18,21 @@ include_once 'class.Rey.js';
 ?>
 
 function check() {
-
+	let piece = document.getElementById("casilla").value;
+	let text = document.getElementById("text");
+	
+	text.value = tab.tableroActual().casilla['d4'].pieza.puedeJugar();
 }
 
 tab = new Partida('juan','alberto');
 tab.tableroActual().despliega();
-document.writeln(tab.tableroActual().casilla['d4'].pieza.puedeJugar());
+document.writeln();
 </script>
 </head>
 
 <body>
-	<input id="casilla" value="" type="text">
+	<input id="casilla" value="coord pieza" type="text">
 	<input id="click" value="Check!" type="button" onclick="check()">
+	<textarea id="text"/>
 </body>
 </html>
