@@ -24,8 +24,8 @@ class Tablero  {
 		const NEGRO = false;
 
 		//piezas Blancas 
-		// var obj = new Torre(BLANCA,this);
-		// this.casilla['a1'].ocupar(obj);
+		var obj = new Torre(BLANCA,this);
+		this.casilla['a1'].ocupar(obj);
 		// obj = new Caballo(BLANCO, this.casilla['b1']);
 		// this.casilla['b1'].ocupar(obj);
 		// obj = new Alfil(BLANCO,this);
