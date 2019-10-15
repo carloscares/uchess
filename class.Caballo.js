@@ -66,18 +66,18 @@ class Caballo extends Pieza {
 			index_y_6 = numbers[numbers.indexOf(y_pos) - 1];
 		}
 
-		let index_x_6;
-		let index_y_6;
+		let index_x_7;
+		let index_y_7;
 		if (letters.indexOf(x_pos) + 2 < 8 && numbers.indexOf(y_pos) - 1 > 0) {
-			index_x_6 = letters[letters.indexOf(x_pos) + 2];
-			index_y_6 = numbers[numbers.indexOf(y_pos) - 1];
+			index_x_7 = letters[letters.indexOf(x_pos) + 2];
+			index_y_7 = numbers[numbers.indexOf(y_pos) - 1];
 		}
 
-		let index_x_6;
-		let index_y_6;
+		let index_x_8;
+		let index_y_8;
 		if (letters.indexOf(x_pos) + 2 < 8 && numbers.indexOf(y_pos) - 1 > 0) {
-			index_x_6 = letters[letters.indexOf(x_pos) + 2];
-			index_y_6 = numbers[numbers.indexOf(y_pos) - 1];
+			index_x_8 = letters[letters.indexOf(x_pos) + 2];
+			index_y_8 = numbers[numbers.indexOf(y_pos) - 1];
 		}
 
 
