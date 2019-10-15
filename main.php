@@ -22,10 +22,12 @@ tab.tableroActual().despliega();
 </script>
 <script>
     function jugar(){
-    document.getElementById("jugadas").innerHTML = tab.tableroActual().casilla['c6'].pieza.puedeJugar();
+    var pos= document.getElementById("texto").value;
+    document.getElementById("jugadas").innerHTML = tab.tableroActual().casilla[pos].pieza.puedeJugar();
 }
 </script>
 <body>
 <input type='button' value='oh boton' onclick='jugar()'>
+<input type='Text' id="texto">
 <div id="jugadas"></div>
 </body>
