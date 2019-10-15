@@ -1,10 +1,10 @@
 class Tablero  {
 
 	constructor(unaPartida) {
-		this.colorCasillaClara ="#eeeeff";
-		this.colorCasillaOscura = "#4444AA";
-		this.colorPiezaClara = "#a2a2a2";
-		this.colorPiezaOscura = "#666690";
+		this.colorCasillaClara ="#e7bc67";
+		this.colorCasillaOscura = "#a87612";
+		this.colorPiezaClara = "#000000";
+		this.colorPiezaOscura = "#FFFFFF";
 		this.casilla = new Array();
 		this.miPartida=unaPartida;
 		var letra = ['a','b','c','d','e','f','g','h'];
