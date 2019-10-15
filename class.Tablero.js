@@ -5,7 +5,6 @@ class Tablero  {
 		this.colorCasillaOscura = "#4494AA";
 		this.colorPiezaClara = "#a2a2a2";
 		this.colorPiezaOscura = "#666690";
-
 		this.casilla = new Array();
 		this.miPartida=unaPartida;
 		var letra = ['a','b','c','d','e','f','g','h'];
