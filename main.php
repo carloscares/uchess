@@ -20,8 +20,15 @@ include_once 'class.Rey.js';
 function check() {
 	let piece = document.getElementById("casilla").value;
 	let text = document.getElementById("text");
+
+	let possibles = tab.tableroActual().casilla['d4'].pieza.puedeJugar();
 	
-	text.value = tab.tableroActual().casilla['d4'].pieza.puedeJugar();
+	text.value = possibles;
+
+	for (let i = 0; i < possibles.length; ++i) {
+		let cell = document.getElementById(possibles[i]);
+		cell.setAttribute("style", "background-colo: orange;");
+	}
 }
 
 tab = new Partida('juan','alberto');
