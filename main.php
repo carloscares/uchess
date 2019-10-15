@@ -27,7 +27,7 @@ function check() {
 
 	for (let i = 0; i < possibles.length; ++i) {
 		let cell = document.getElementById(possibles[i]);
-		cell.setAttribute("style", "background-colo: orange;");
+		cell.setAttribute("style", "background-color: orange;");
 	}
 }
 
