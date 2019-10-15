@@ -17,4 +17,5 @@ include_once 'class.Rey.js';
 
 tab = new Partida('juan','alberto');
 tab.tableroActual().despliega();
+document.writeln("hola");
 </script>
