@@ -60,73 +60,73 @@ class Caballo extends Pieza {
 
 		// do the next bit for every position
 
-		if (this.casillaActual.tablero.casilla[pos_1].ocupadaNegro()) {
+		if (pos_1 !== undefined && this.casillaActual.tablero.casilla[pos_1].ocupadaNegro()) {
 			if (this.esBlanco) {
 				ret.push([this.casillaActual.tablero.casilla[pos_1], true]);
 			} else {
 				// nothing happens because i can't eat my own pieces.
 			}
-		} else if (TouchList.casillaActual.tablero.casilla[pos_1].ocupadaBlanco()) {
+		} else if (pos_1 !== undefined && this.casillaActual.tablero.casilla[pos_1].ocupadaBlanco()) {
 			if (!this.esBlanco) {
 				ret.push([this.casillaActual.tablero.casilla[pos_1], true]);
 			} else {
 				// nothing happens because %
 			}
-		} else {
+		} else if (pos_1 !== undefined) {
 			ret.push([this.casillaActual.tablero.casilla[pos_1], false]);
 		}
 
 		// ---------------------------
 
-		if (this.casillaActual.tablero.casilla[pos_2].ocupadaNegro()) {
+		if (pos_2 !== undefined && this.casillaActual.tablero.casilla[pos_2].ocupadaNegro()) {
 			if (this.esBlanco) {
 				ret.push([this.casillaActual.tablero.casilla[pos_2], true]);
 			} else {
 				// nothing happens because i can't eat my own pieces.
 			}
-		} else if (TouchList.casillaActual.tablero.casilla[pos_2].ocupadaBlanco()) {
+		} else if (pos_2 !== undefined && this.casillaActual.tablero.casilla[pos_2].ocupadaBlanco()) {
 			if (!this.esBlanco) {
 				ret.push([this.casillaActual.tablero.casilla[pos_2], true]);
 			} else {
 				// nothing happens because %
 			}
-		} else {
+		} else if (pos_2 !== undefined) {
 			ret.push([this.casillaActual.tablero.casilla[pos_2], false]);
 		}
 
 		// ---------------------------
 
-		if (this.casillaActual.tablero.casilla[pos_3].ocupadaNegro()) {
+		if (pos_3 !== undefined && this.casillaActual.tablero.casilla[pos_3].ocupadaNegro()) {
 			if (this.esBlanco) {
 				ret.push([this.casillaActual.tablero.casilla[pos_3], true]);
 			} else {
 				// nothing happens because i can't eat my own pieces.
 			}
-		} else if (TouchList.casillaActual.tablero.casilla[pos_3].ocupadaBlanco()) {
+		} else if (pos_3 !== undefined && this.casillaActual.tablero.casilla[pos_3].ocupadaBlanco()) {
 			if (!this.esBlanco) {
 				ret.push([this.casillaActual.tablero.casilla[pos_3], true]);
 			} else {
 				// nothing happens because %
 			}
-		} else {
+		} else if (pos_3 !== undefined) {
 			ret.push([this.casillaActual.tablero.casilla[pos_3], false]);
 		}
 
 		// ---------------------------
 
-		if (this.casillaActual.tablero.casilla[pos_4].ocupadaNegro()) {
+		if (pos_4 !== undefined && this.casillaActual.tablero.casilla[pos_4].ocupadaNegro()) {
 			if (this.esBlanco) {
 				ret.push([this.casillaActual.tablero.casilla[pos_4], true]);
 			} else {
 				// nothing happens because i can't eat my own pieces.
 			}
-		} else if (TouchList.casillaActual.tablero.casilla[pos_4].ocupadaBlanco()) {
+		} else if (pos_4 !== undefined && this.casillaActual.tablero.casilla[pos_4].ocupadaBlanco()) {
 			if (!this.esBlanco) {
 				ret.push([this.casillaActual.tablero.casilla[pos_4], true]);
 			} else {
 				// nothing happens because %
 			}
-		} else {
+		} else if (pos_4 !== undefined) {
 			ret.push([this.casillaActual.tablero.casilla[pos_4], false]);
 		}
 
