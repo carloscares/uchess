@@ -13,7 +13,7 @@ class Caballo extends Pieza {
 	}
 
 	puedeJugar() {
-		let position = this.casillaActual.id.split();
+		let position = this.casillaActual.id.split("");
 		let x_pos = position[0];
 		let y_pos = position[1];
 
