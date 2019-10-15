@@ -1,15 +1,20 @@
 class Torre extends Pieza {
 
-	constructor(trueSiBlanca,casillaContenedora){
-		super(trueSiBlanca,casillaContenedora);
+	constructor(trueSiBlanca, casillaContenedora) {
+		super(trueSiBlanca, casillaContenedora);
 	}
 
 	despliega() {
 
-		if(this.esBlanca())
+		if (this.esBlanca())
 			return "T-B";
 		else
 			return "T-N";
+	}
+
+	puedeJugar() {
+		let tablero = this.casillaContenedora.tablero;
+		
 	}
 }
 
