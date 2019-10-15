@@ -102,7 +102,7 @@ class Caballo extends Pieza {
 
 		// ---------------------------
 
-		if (!isNaN(pos_3)) {
+		if (isNaN(pos_3)) {
 			if (this.casillaActual.tablero.casilla[pos_3].ocupadaNegro()) {
 				if (this.esBlanco) {
 					ret.push(this.casillaActual.tablero.casilla[pos_3].id);
@@ -123,7 +123,7 @@ class Caballo extends Pieza {
 
 		// ---------------------------
 
-		if (!isNaN(pos_4)) {
+		if (isNaN(pos_4)) {
 			if (this.casillaActual.tablero.casilla[pos_4].ocupadaNegro()) {
 				if (this.esBlanco) {
 					ret.push(this.casillaActual.tablero.casilla[pos_4].id);

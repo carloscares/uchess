@@ -1,3 +1,5 @@
+<html>
+<head>
 <script>
 <?php
 error_reporting(E_ALL);
@@ -15,7 +17,18 @@ include_once 'class.Dama.js';
 include_once 'class.Rey.js';
 ?>
 
+function check() {
+	
+}
+
 tab = new Partida('juan','alberto');
 tab.tableroActual().despliega();
 document.writeln(tab.tableroActual().casilla['g1'].pieza.puedeJugar());
 </script>
+</head>
+
+<body>
+	<input id="casilla" value="HOLA" type="text">
+	<input id="click" value="HOLA" type="button" onclick="check()">
+</body>
+</html>
