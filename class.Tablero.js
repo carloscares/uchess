@@ -1,8 +1,8 @@
 class Tablero  {
 
 	constructor(unaPartida) {
-		this.colorCasillaClara ="#eeeeff";
-		this.colorCasillaOscura = "#4444AA";
+		this.colorCasillaClara ="#98B628";
+		this.colorCasillaOscura = "#CD4910";
 		this.colorPiezaClara = "#a2a2a2";
 		this.colorPiezaOscura = "#666690";
 		this.casilla = new Array();
