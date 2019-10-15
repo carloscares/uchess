@@ -63,18 +63,18 @@ class Caballo extends Pieza {
 		if (isNaN(pos_1)) {
 			if (this.casillaActual.tablero.casilla[pos_1].ocupadaNegro()) {
 				if (this.esBlanco) {
-					ret.push([this.casillaActual.tablero.casilla[pos_1], true]);
+					ret.push(this.casillaActual.tablero.casilla[pos_1]);
 				} else {
 					// nothing happens because i can't eat my own pieces.
 				}
 			} else if (this.casillaActual.tablero.casilla[pos_1].ocupadaBlanco()) {
 				if (!this.esBlanco) {
-					ret.push([this.casillaActual.tablero.casilla[pos_1], true]);
+					ret.push(this.casillaActual.tablero.casilla[pos_1]);
 				} else {
 					// nothing happens because %
 				}
 			} else {
-				ret.push([this.casillaActual.tablero.casilla[pos_1], false]);
+				ret.push(this.casillaActual.tablero.casilla[pos_1]);
 			}
 		}
 		
@@ -84,18 +84,18 @@ class Caballo extends Pieza {
 		if (isNaN(pos_2)) {
 			if (this.casillaActual.tablero.casilla[pos_2].ocupadaNegro()) {
 				if (this.esBlanco) {
-					ret.push([this.casillaActual.tablero.casilla[pos_2], true]);
+					ret.push(this.casillaActual.tablero.casilla[pos_2]);
 				} else {
 					// nothing happens because i can't eat my own pieces.
 				}
 			} else if (this.casillaActual.tablero.casilla[pos_2].ocupadaBlanco()) {
 				if (!this.esBlanco) {
-					ret.push([this.casillaActual.tablero.casilla[pos_2], true]);
+					ret.push(this.casillaActual.tablero.casilla[pos_2]);
 				} else {
 					// nothing happens because %
 				}
 			} else {
-				ret.push([this.casillaActual.tablero.casilla[pos_2], false]);
+				ret.push(this.casillaActual.tablero.casilla[pos_2]);
 			}
 		}
 		
@@ -105,18 +105,18 @@ class Caballo extends Pieza {
 		if (!isNaN(pos_3)) {
 			if (this.casillaActual.tablero.casilla[pos_3].ocupadaNegro()) {
 				if (this.esBlanco) {
-					ret.push([this.casillaActual.tablero.casilla[pos_3], true]);
+					ret.push(this.casillaActual.tablero.casilla[pos_3]);
 				} else {
 					// nothing happens because i can't eat my own pieces.
 				}
 			} else if (this.casillaActual.tablero.casilla[pos_3].ocupadaBlanco()) {
 				if (!this.esBlanco) {
-					ret.push([this.casillaActual.tablero.casilla[pos_3], true]);
+					ret.push(this.casillaActual.tablero.casilla[pos_3]);
 				} else {
 					// nothing happens because %
 				}
 			} else {
-				ret.push([this.casillaActual.tablero.casilla[pos_3], false]);
+				ret.push(this.casillaActual.tablero.casilla[pos_3]);
 			}
 		}
 		
@@ -126,18 +126,18 @@ class Caballo extends Pieza {
 		if (!isNaN(pos_4)) {
 			if (this.casillaActual.tablero.casilla[pos_4].ocupadaNegro()) {
 				if (this.esBlanco) {
-					ret.push([this.casillaActual.tablero.casilla[pos_4], true]);
+					ret.push(this.casillaActual.tablero.casilla[pos_4]);
 				} else {
 					// nothing happens because i can't eat my own pieces.
 				}
 			} else if (this.casillaActual.tablero.casilla[pos_4].ocupadaBlanco()) {
 				if (!this.esBlanco) {
-					ret.push([this.casillaActual.tablero.casilla[pos_4], true]);
+					ret.push(this.casillaActual.tablero.casilla[pos_4]);
 				} else {
 					// nothing happens because %
 				}
 			} else {
-				ret.push([this.casillaActual.tablero.casilla[pos_4], false]);
+				ret.push(this.casillaActual.tablero.casilla[pos_4]);
 			}
 		}
 		
