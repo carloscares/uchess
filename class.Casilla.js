@@ -33,7 +33,8 @@ class Casilla {
     }
 
     estaVacia() {
-        return this.pieza == ""
+        
+        return this.pieza == "";
     }
 
 
