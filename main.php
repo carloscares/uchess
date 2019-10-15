@@ -18,7 +18,7 @@ include_once 'class.Rey.js';
 ?>
 
 function check() {
-	
+
 }
 
 tab = new Partida('juan','alberto');
@@ -28,7 +28,7 @@ document.writeln(tab.tableroActual().casilla['g1'].pieza.puedeJugar());
 </head>
 
 <body>
-	<input id="casilla" value="HOLA" type="text">
-	<input id="click" value="HOLA" type="button" onclick="check()">
+	<input id="casilla" value="" type="text">
+	<input id="click" value="Check!" type="button" onclick="check()">
 </body>
 </html>
