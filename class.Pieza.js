@@ -4,6 +4,7 @@ class Pieza {
     constructor(trueSiBlanca, casillaContenedora){
         this.color = trueSiBlanca;
         this.casillaActual = casillaContenedora;
+	this.casillaActual.ocupar(this);
         this.yaMovido = false;
     }
 
