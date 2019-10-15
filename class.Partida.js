@@ -34,7 +34,7 @@ class Partida  {
 		var n = this.tablero.length - 1;
 		return this.tablero[n];
 	}
-	
+
 
 }
 

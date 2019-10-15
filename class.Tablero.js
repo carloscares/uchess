@@ -87,8 +87,8 @@ class Tablero  {
 					col = this.colorCasillaClara;
 				else
 					col = this.colorCasillaOscura;
-				document.write('<td height="40" style="background-color:'+col+'">');
 				idx = letra[j]+i;
+				document.write('<td id='+idx+' height="40" style="background-color:'+col+'">');
 				document.write(this.casilla[idx].despliega());
 				document.writeln('</td>');
 			}

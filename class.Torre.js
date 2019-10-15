@@ -49,58 +49,51 @@ class Torre extends Pieza {
 				posiblesPosiciones4.push(pos);
 			}
 		}
-		for (var i = (posiblesPosiciones1.length - 1); i >= 0; i--) {
-			var casilla = tablero.casilla[posiblesPosiciones1[i]];
-			if (casilla.estaVacia()) {
-				jugadas.push(posiblesPosiciones1[i]);
-			}
-			else {
-				if (condicion != tablero.casilla[posiblesPosiciones1[i]].pieza.esBlanco()) {
-					jugadas.push(posiblesPosiciones1[i]);
-				}
-				break;
-			}
-		}
-		for (var i = (posiblesPosiciones3.length - 1); i >= 0; i--) {
-			var casilla = tablero.casilla[posiblesPosiciones3[i]];
-			if (casilla.estaVacia()) {
-				jugadas.push(posiblesPosiciones3[i]);
-			}
-			else {
-				if (condicion != tablero.casilla[posiblesPosiciones3[i]].pieza.esBlanco()) {
-					jugadas.push(posiblesPosiciones3[i]);
-				}
-				break;
-			}
-		}
-		for (var i = 0; i < posiblesPosiciones2.length; i++) {
-			var casilla = tablero.casilla[posiblesPosiciones2[i]];
-			if (casilla.estaVacia()) {
-				jugadas.push(posiblesPosiciones2[i]);
-			}
-			else {
-				if (condicion != tablero.casilla[posiblesPosiciones2[i]].pieza.esBlanco()) {
-					jugadas.push(posiblesPosiciones2[i]);
-				}
-				break;
-			}
-		}
-		for (var i = 0; i < posiblesPosiciones4.length; i++) {
-			var casilla = tablero.casilla[posiblesPosiciones4[i]];
-			if (casilla.estaVacia()) {
-				jugadas.push(posiblesPosiciones4[i]);
-			}
-			else {
-				
-				if (condicion != tablero.casilla[posiblesPosiciones4[i]].pieza.esBlanco()) {
-					jugadas.push(posiblesPosiciones4[i]);
-				}
-			
-				break;
-			}
-		}
+		this.calcularPosiblesPosiciones1(posiblesPosiciones4, jugadas, tablero,condicion);
+		this.calcularPosiblesPosiciones1(posiblesPosiciones2, jugadas, tablero,condicion);
+		this.calcularPosiblesPosiciones2(posiblesPosiciones1, jugadas, tablero,condicion);
+		this.calcularPosiblesPosiciones2(posiblesPosiciones3, jugadas, tablero,condicion);
 		console.log(jugadas);
 		return jugadas;
+
+	}
+	calcularPosiblesPosiciones2(posiblesPosiciones, jugadas, tablero,condicion) {
+		for (var i = (posiblesPosiciones.length - 1); i >= 0; i--) {
+			var casilla = tablero.casilla[posiblesPosiciones[i]];
+			if (casilla.estaVacia()) {
+				jugadas.push(posiblesPosiciones[i]);
+				this.cambiarColor(casilla);
+			}
+			else {
+				if (condicion != tablero.casilla[posiblesPosiciones[i]].pieza.esBlanco()) {
+					jugadas.push(posiblesPosiciones[i]);
+					this.cambiarColor(casilla);
+				}
+				break;
+			}
+		}
+
+	}
+	calcularPosiblesPosiciones1(posiblesPosiciones, jugadas, tablero,condicion) {
+		for (var i = 0; i < posiblesPosiciones.length; i++) {
+			var casilla = tablero.casilla[posiblesPosiciones[i]];
+			if (casilla.estaVacia()) {
+				jugadas.push(posiblesPosiciones[i]);
+				this.cambiarColor(casilla);
+			}
+			else {
+
+				if (condicion != tablero.casilla[posiblesPosiciones[i]].pieza.esBlanco()) {
+					jugadas.push(posiblesPosiciones[i]);
+					this.cambiarColor(casilla);
+				}
+
+				break;
+			}
+		}
+	}
+	cambiarColor(casilla) {
+		document.getElementById(casilla.id).style.backgroundColor = "orange";
 
 	}
 }
