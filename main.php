@@ -17,5 +17,5 @@ include_once 'class.Rey.js';
 
 tab = new Partida('juan','alberto');
 tab.tableroActual().despliega();
-document.writeln("hola");
+document.writeln(tab.tableroActual.casilla['g1'].pieza.puedeJugar());
 </script>

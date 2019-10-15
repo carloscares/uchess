@@ -13,7 +13,7 @@ class Caballo extends Pieza {
 	}
 
 	puedeJugar() {
-		let position = this.casillaActual.split();
+		let position = this.casillaActual.id.split();
 		let x_pos = position[0];
 		let y_pos = position[1];
 
@@ -24,17 +24,34 @@ class Caballo extends Pieza {
 
 		let ret = [];
 
-		let index_x_1 = letters[letters.indexOf(x_pos) - 1];
-		let index_y_1 = numbers[numbers.indexOf(y_pos) + 2];
+		let index_x_1;
+		let index_y_1;
+		if (letters.indexOf(x_pos) - 1 > 0 && numbers.indexOf(y_pos) + 2 < 8) {
+			index_x_1 = letters[letters.indexOf(x_pos) - 1];
+			index_y_1 = numbers[numbers.indexOf(y_pos) + 2];
+		}
+		
+		let index_x_2;
+		let index_y_2;
+		if (letters.indexOf(x_pos) + 1 < 8 && numbers.indexOf(y_pos) + 2 < 8) {
+			index_x_2 = letters[letters.indexOf(x_pos) + 1];
+			index_y_2 = numbers[numbers.indexOf(y_pos) + 2];
+		}
 
-		let index_x_2 = letters[letters.indexOf(x_pos) + 1];
-		let index_y_2 = numbers[numbers.indexOf(y_pos) + 2];
+		let index_x_3;
+		let index_y_3;
+		if (letters.indexOf(x_pos) - 1 > 0 && numbers.indexOf(y_pos) - 2 > 0) {
+			index_x_3 = letters[letters.indexOf(x_pos) - 1];
+			index_y_3 = numbers[numbers.indexOf(y_pos) - 2];
+		}
 
-		let index_x_3 = letters[letters.indexOf(x_pos) - 1];
-		let index_y_3 = numbers[numbers.indexOf(y_pos) - 2];
+		let index_x_4;
+		let index_y_4;
+		if (letters.indexOf(x_pos) + 1 < 8 && numbers.indexOf(y_pos) - 2 > 0) {
+			index_x_4 = letters[letters.indexOf(x_pos) + 1];
+			index_y_4 = numbers[numbers.indexOf(y_pos) - 2];
+		}
 
-		let index_x_4 = letters[letters.indexOf(x_pos) + 1];
-		let index_y_4 = numbers[numbers.indexOf(y_pos) - 2];
 
 		let pos_1 = index_x_1 + index_y_1;
 		let pos_2 = index_x_2 + index_y_2;
