@@ -60,7 +60,7 @@ class Caballo extends Pieza {
 
 		// do the next bit for every position
 
-		if (pos_1 != undefined && pos_1 != NaN) {
+		if (isNaN(pos_1)) {
 			if (this.casillaActual.tablero.casilla[pos_1].ocupadaNegro()) {
 				if (this.esBlanco) {
 					ret.push([this.casillaActual.tablero.casilla[pos_1], true]);
@@ -81,7 +81,7 @@ class Caballo extends Pieza {
 
 		// ---------------------------
 
-		if (pos_2 != undefined && pos_2 != NaN) {
+		if (isNaN(pos_2)) {
 			if (this.casillaActual.tablero.casilla[pos_2].ocupadaNegro()) {
 				if (this.esBlanco) {
 					ret.push([this.casillaActual.tablero.casilla[pos_2], true]);
@@ -102,7 +102,7 @@ class Caballo extends Pieza {
 
 		// ---------------------------
 
-		if (pos_3 != undefined && pos_3 != NaN) {
+		if (!isNaN(pos_3)) {
 			if (this.casillaActual.tablero.casilla[pos_3].ocupadaNegro()) {
 				if (this.esBlanco) {
 					ret.push([this.casillaActual.tablero.casilla[pos_3], true]);
@@ -123,7 +123,7 @@ class Caballo extends Pieza {
 
 		// ---------------------------
 
-		if (pos_4 != undefined && pos_4 != NaN) {
+		if (!isNaN(pos_4)) {
 			if (this.casillaActual.tablero.casilla[pos_4].ocupadaNegro()) {
 				if (this.esBlanco) {
 					ret.push([this.casillaActual.tablero.casilla[pos_4], true]);
