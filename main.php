@@ -23,7 +23,7 @@ function check() {
 
 tab = new Partida('juan','alberto');
 tab.tableroActual().despliega();
-document.writeln(tab.tableroActual().casilla['g1'].pieza.puedeJugar());
+document.writeln(tab.tableroActual().casilla['d4'].pieza.puedeJugar());
 </script>
 </head>
 
