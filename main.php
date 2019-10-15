@@ -17,11 +17,11 @@ include_once 'class.Rey.js';
 
 tab = new Partida('juan','alberto');
 tab.tableroActual().despliega();
-console.log(tab.tableroActual().casilla["d4"].pieza.puedeJugar());
+console.log(tab.tableroActual().casilla["a1"].pieza.puedeJugar());
 
 function posibles(){
     
-    document.getElementById("posibles").innerText = tab.tableroActual().casilla["d4"].pieza.puedeJugar().toString();
+    document.getElementById("posibles").innerText = tab.tableroActual().casilla['h4'].pieza.puedeJugar().toString();
 }
 </script>
 

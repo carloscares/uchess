@@ -21,6 +21,9 @@ class Torre extends Pieza {
 		for (let i = Number(id[1]) + 1; i <= 8; i++) {
 			let idx = id[0] + i;
 			if (!tablero.casilla[idx].estaVacia()) {
+				if (tablero.casilla[idx].pieza.esBlanca() === this.esBlanca() || tablero.casilla[idx].pieza.esNegro() === this.esNegro){
+					break;
+				}
 				if (!eated) {
 					eated = true;
 				}
@@ -36,6 +39,9 @@ class Torre extends Pieza {
 			let count = 0;
 			let idx = id[0] + i;
 			if (!tablero.casilla[idx].estaVacia()) {
+				if (tablero.casilla[idx].pieza.esBlanca() === this.esBlanca() || tablero.casilla[idx].pieza.esNegro() === this.esNegro){
+					break;
+				}
 				if (!eated) {
 					eated = true;
 				}
@@ -55,6 +61,9 @@ class Torre extends Pieza {
 			let count = 0;
 			let idx = letra[i] + id[1];
 			if (!tablero.casilla[idx].estaVacia()) {
+				if (tablero.casilla[idx].pieza.esBlanca() === this.esBlanca() || tablero.casilla[idx].pieza.esNegro() === this.esNegro){
+					break;
+				}
 				if (!eated) {
 					eated = true;
 				}
@@ -70,6 +79,9 @@ class Torre extends Pieza {
 			let count = 0;
 			let idx = letra[i] + id[1];
 			if (!tablero.casilla[idx].estaVacia()) {
+				if (tablero.casilla[idx].pieza.esBlanca() === this.esBlanca() || tablero.casilla[idx].pieza.esNegro() === this.esNegro){
+					break;
+				}
 				if (!eated) {
 					eated = true;
 				}
