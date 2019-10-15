@@ -1,4 +1,3 @@
-
 class Pieza {
 
     constructor(trueSiBlanca, casillaContenedora){

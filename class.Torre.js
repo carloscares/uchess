@@ -11,5 +11,12 @@ class Torre extends Pieza {
 		else
 			return "T-N";
 	}
+
+	puedeJugar() {
+		let position = this.casillaActual.split();
+		console.log(position);
+		let ret = [];
+
+	}
 }
 
