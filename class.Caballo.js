@@ -60,75 +60,87 @@ class Caballo extends Pieza {
 
 		// do the next bit for every position
 
-		if (pos_1 !== undefined && this.casillaActual.tablero.casilla[pos_1].ocupadaNegro()) {
-			if (this.esBlanco) {
-				ret.push([this.casillaActual.tablero.casilla[pos_1], true]);
+		if (pos_1 !== undefined) {
+			if (this.casillaActual.tablero.casilla[pos_1].ocupadaNegro()) {
+				if (this.esBlanco) {
+					ret.push([this.casillaActual.tablero.casilla[pos_1], true]);
+				} else {
+					// nothing happens because i can't eat my own pieces.
+				}
+			} else if (this.casillaActual.tablero.casilla[pos_1].ocupadaBlanco()) {
+				if (!this.esBlanco) {
+					ret.push([this.casillaActual.tablero.casilla[pos_1], true]);
+				} else {
+					// nothing happens because %
+				}
 			} else {
-				// nothing happens because i can't eat my own pieces.
+				ret.push([this.casillaActual.tablero.casilla[pos_1], false]);
 			}
-		} else if (pos_1 !== undefined && this.casillaActual.tablero.casilla[pos_1].ocupadaBlanco()) {
-			if (!this.esBlanco) {
-				ret.push([this.casillaActual.tablero.casilla[pos_1], true]);
-			} else {
-				// nothing happens because %
-			}
-		} else if (pos_1 !== undefined) {
-			ret.push([this.casillaActual.tablero.casilla[pos_1], false]);
 		}
+		
 
 		// ---------------------------
 
-		if (pos_2 !== undefined && this.casillaActual.tablero.casilla[pos_2].ocupadaNegro()) {
-			if (this.esBlanco) {
-				ret.push([this.casillaActual.tablero.casilla[pos_2], true]);
+		if (pos_2 !== undefined) {
+			if (this.casillaActual.tablero.casilla[pos_2].ocupadaNegro()) {
+				if (this.esBlanco) {
+					ret.push([this.casillaActual.tablero.casilla[pos_2], true]);
+				} else {
+					// nothing happens because i can't eat my own pieces.
+				}
+			} else if (this.casillaActual.tablero.casilla[pos_2].ocupadaBlanco()) {
+				if (!this.esBlanco) {
+					ret.push([this.casillaActual.tablero.casilla[pos_2], true]);
+				} else {
+					// nothing happens because %
+				}
 			} else {
-				// nothing happens because i can't eat my own pieces.
+				ret.push([this.casillaActual.tablero.casilla[pos_2], false]);
 			}
-		} else if (pos_2 !== undefined && this.casillaActual.tablero.casilla[pos_2].ocupadaBlanco()) {
-			if (!this.esBlanco) {
-				ret.push([this.casillaActual.tablero.casilla[pos_2], true]);
-			} else {
-				// nothing happens because %
-			}
-		} else if (pos_2 !== undefined) {
-			ret.push([this.casillaActual.tablero.casilla[pos_2], false]);
 		}
+		
 
 		// ---------------------------
 
-		if (pos_3 !== undefined && this.casillaActual.tablero.casilla[pos_3].ocupadaNegro()) {
-			if (this.esBlanco) {
-				ret.push([this.casillaActual.tablero.casilla[pos_3], true]);
+		if (pos_3 !== undefined) {
+			if (this.casillaActual.tablero.casilla[pos_3].ocupadaNegro()) {
+				if (this.esBlanco) {
+					ret.push([this.casillaActual.tablero.casilla[pos_3], true]);
+				} else {
+					// nothing happens because i can't eat my own pieces.
+				}
+			} else if (this.casillaActual.tablero.casilla[pos_3].ocupadaBlanco()) {
+				if (!this.esBlanco) {
+					ret.push([this.casillaActual.tablero.casilla[pos_3], true]);
+				} else {
+					// nothing happens because %
+				}
 			} else {
-				// nothing happens because i can't eat my own pieces.
+				ret.push([this.casillaActual.tablero.casilla[pos_3], false]);
 			}
-		} else if (pos_3 !== undefined && this.casillaActual.tablero.casilla[pos_3].ocupadaBlanco()) {
-			if (!this.esBlanco) {
-				ret.push([this.casillaActual.tablero.casilla[pos_3], true]);
-			} else {
-				// nothing happens because %
-			}
-		} else if (pos_3 !== undefined) {
-			ret.push([this.casillaActual.tablero.casilla[pos_3], false]);
 		}
+		
 
 		// ---------------------------
 
-		if (pos_4 !== undefined && this.casillaActual.tablero.casilla[pos_4].ocupadaNegro()) {
-			if (this.esBlanco) {
-				ret.push([this.casillaActual.tablero.casilla[pos_4], true]);
+		if (pos_4 !== undefined) {
+			if (this.casillaActual.tablero.casilla[pos_4].ocupadaNegro()) {
+				if (this.esBlanco) {
+					ret.push([this.casillaActual.tablero.casilla[pos_4], true]);
+				} else {
+					// nothing happens because i can't eat my own pieces.
+				}
+			} else if (this.casillaActual.tablero.casilla[pos_4].ocupadaBlanco()) {
+				if (!this.esBlanco) {
+					ret.push([this.casillaActual.tablero.casilla[pos_4], true]);
+				} else {
+					// nothing happens because %
+				}
 			} else {
-				// nothing happens because i can't eat my own pieces.
+				ret.push([this.casillaActual.tablero.casilla[pos_4], false]);
 			}
-		} else if (pos_4 !== undefined && this.casillaActual.tablero.casilla[pos_4].ocupadaBlanco()) {
-			if (!this.esBlanco) {
-				ret.push([this.casillaActual.tablero.casilla[pos_4], true]);
-			} else {
-				// nothing happens because %
-			}
-		} else if (pos_4 !== undefined) {
-			ret.push([this.casillaActual.tablero.casilla[pos_4], false]);
 		}
+		
 
 		console.log(ret);
 	}
