@@ -85,10 +85,10 @@ class Caballo extends Pieza {
 		let pos_2 = index_x_2 + index_y_2;
 		let pos_3 = index_x_3 + index_y_3;
 		let pos_4 = index_x_4 + index_y_4;
-		let pos_5 = index_x_4 + index_y_4;
-		let pos_6 = index_x_4 + index_y_4;
-		let pos_7 = index_x_4 + index_y_4;
-		let pos_8 = index_x_4 + index_y_4;
+		let pos_5 = index_x_5 + index_y_5;
+		let pos_6 = index_x_6 + index_y_6;
+		let pos_7 = index_x_7 + index_y_7;
+		let pos_8 = index_x_8 + index_y_8;
 
 		// do the next bit for every position
 
