@@ -13,7 +13,7 @@ class Partida  {
 	}
 
 	juegaBlanca() {
-		if (this.turno==='Blanca')
+		if (this.turno === 'Blanca')
 			return true;
 		else
 			return false;
