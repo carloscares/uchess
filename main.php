@@ -57,8 +57,8 @@ function jugar(){
     let casillaLlegada = tab.tableroActual().casilla[jugada[1]];
     if (jugadasPosibles.includes(casillaLlegada.id)){
         tab.tableroActual().ocuparCasilla(casillaLlegada.id, pieza);
+        jugadaNegras();
     }
-    jugadaNegras();
     imprimirTablero();
 }
 
