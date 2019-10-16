@@ -1,22 +1,27 @@
 class Tablero  {
 
-	constructor(unaPartida) {
-		this.colorCasillaClara = "#e9e9e9";
-		this.colorCasillaOscura = "#676767";
+	constructor(partida) {
+		this.colorCasillaClara = "#d0d0d0";
+		this.colorCasillaOscura = "#be2a2a";
 		this.colorPiezaClara = "#a2a2a2";
 		this.colorPiezaOscura = "#666690";
-		this.casilla = new Array();
-		this.miPartida=unaPartida;
-		var letra = ['a','b','c','d','e','f','g','h'];
-		for(var i=1 ; i<=8 ;i++)
-			for(var j=0 ; j< letra.length ; j++ ){
-				var idx = letra[j]+i;
-				this.casilla[idx] = new Casilla(idx,this);
+
+		this.casillas = new Array();
+		this.partida = partida;
+
+		var letra = ['a', 'b' ,'c' ,'d' ,'e' ,'f' ,'g' ,'h'];
+
+		for(var i = 1; i <= 8; ++i) {
+			for(var j = 0; j < letra.length; ++j){
+				var idx = letra[j] + i;
+				this.casillas[idx] = new Casilla(idx,this);
 			}
-		this.ponePiezasIniciales();
+		}
+			
+		this.poner_piezas_iniciales();
 	}
 
-	ponePiezasIniciales() {
+	poner_piezas_iniciales() {
 		//falta
 		const BLANCA = true;
 		const NEGRA = false;
@@ -24,40 +29,24 @@ class Tablero  {
 		const NEGRO = false;
 
 		//piezas Blancas 
-		var obj = new Torre(BLANCA, this.casilla['e2']);
-		this.casilla['e2'].ocupar(obj);
-		// obj = new Caballo(BLANCO, this.casilla['b1']);
-		// this.casilla['b1'].ocupar(obj);
-		// obj = new Alfil(BLANCO,this);
-		// this.casilla['c1'var obj = new Torre(BLANCA, this.casilla['e2']);
-		// obj = new Dama(BLANCA,this);
-		// this.casilla['d1'].ocupar(obj);
-		// obj = new Rey(BLANCO,this);
-		// this.casilla['e1'].ocupar(obj);
-		// obj = new Alfil(BLANCO,this);
-		// this.casilla['f1'].ocupar(obj);
-		obj = new Caballo(BLANCO, this.casilla['d4']);
-		this.casilla['d4'].ocupar(obj);
-		// obj = new Torre(BLANCA,this);
-		// this.casilla['h1'].ocupar(obj);
+		new Caballo(BLANCO, this.casillas['a1']);
+		new Caballo(BLANCO, this.casillas['b2']);
+		new Caballo(BLANCO, this.casillas['c1']);
+		new Caballo(BLANCO, this.casillas['d2']);
+		new Caballo(BLANCO, this.casillas['e1']);
+		new Caballo(BLANCO, this.casillas['f2']);
+		new Caballo(BLANCO, this.casillas['g1']);
+		new Caballo(BLANCO, this.casillas['h2']);
 
 		//piezas Negras
-		var obj = new Torre(NEGRA, this.casilla['e6']);
-		this.casilla['e6'].ocupar(obj);
-		// obj = new Caballo(NEGRO,this);
-		// this.casilla['b8'].ocupar(obj);
-		// obj = new Alfil(NEGRO,this);
-		// this.casilla['c8'].ocupar(obj);
-		// obj = new Dama(NEGRA,this);
-		// this.casilla['d8'].ocupar(obj);
-		// obj = new Rey(NEGRO,this);
-		// this.casilla['e8'].ocupar(obj);
-		// obj = new Alfil(NEGRO,this);
-		// this.casilla['f8'].ocupar(obj);
-		// obj = new Caballo(NEGRO,this);
-		// this.casilla['g8'].ocupar(obj);
-		// obj = new Torre(NEGRA,this);
-		// this.casilla['h8'].ocupar(obj);
+		new Caballo(NEGRA, this.casillas['a8']);
+		new Caballo(NEGRO, this.casillas['b7']);
+		new Caballo(NEGRO, this.casillas['c8']);
+		new Caballo(NEGRO, this.casillas['d7']);
+		new Caballo(NEGRO, this.casillas['e8']);
+		new Caballo(NEGRO, this.casillas['f7']);
+		new Caballo(NEGRO, this.casillas['g8']);
+		new Caballo(NEGRO, this.casillas['h7']);
 
 		//peones ambos bandos
 		// var idx;
@@ -74,15 +63,16 @@ class Tablero  {
 		return true;
 	}
 
-	ocuparCasilla(casillaid,pieza){
+	ocuparCasilla(casilla_id, pieza) {
 
 	}
 
-	despliega(){
+	despliega() {
 		this.despliega_tabla_html();
 	}
 
 	despliega_tabla_html() {
+		document.writeln("<h1>Ajedrez mágico</h1>");
 		var idx,col;
 		var letra = ['a','b','c','d','e','f','g','h'];
 		document.writeln('<table border="1" style="text-align:center">');
@@ -100,7 +90,7 @@ class Tablero  {
 					col = this.colorCasillaOscura;
 				idx = letra[j]+i;
 				document.write('<td id="' + idx + '" height="40" style="background-color:'+col+'">');
-				document.write(this.casilla[idx].despliega());
+				document.write(this.casillas[idx].despliega());
 				document.writeln('</td>');
 			}
 			document.writeln('<td>'+i+'</td></tr>');

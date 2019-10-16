@@ -1,7 +1,7 @@
 class Caballo extends Pieza {
 
-	constructor(trueSiBlanca,casillaContenedora){
-		super(trueSiBlanca,casillaContenedora);
+	constructor(trueSiBlanca, casillaContenedora){
+		super(trueSiBlanca, casillaContenedora);
 	}
 
 	despliega() {
@@ -17,7 +17,6 @@ class Caballo extends Pieza {
 		let x_pos = position[0];
 		let y_pos = position[1];
 
-		console.log(position);
 
 		let letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
 		let numbers = ['1', '2', '3', '4', '5', '6', '7', '8'];
@@ -92,168 +91,167 @@ class Caballo extends Pieza {
 
 		// do the next bit for every position
 
-		if (isNaN(pos_1)) {
-			if (this.casillaActual.tablero.casilla[pos_1].ocupadaNegro()) {
+		if (typeof pos_1 === "string") {
+			if (this.casillaActual.tablero.casillas[pos_1].ocupadaNegro()) {
 				if (this.esBlanco) {
-					ret.push(this.casillaActual.tablero.casilla[pos_1].id);
+					ret.push(this.casillaActual.tablero.casillas[pos_1].id);
 				} else {
 					// nothing happens because i can't eat my own pieces.
 				}
-			} else if (this.casillaActual.tablero.casilla[pos_1].ocupadaBlanco()) {
+			} else if (this.casillaActual.tablero.casillas[pos_1].ocupadaBlanco()) {
 				if (!this.esBlanco) {
-					ret.push(this.casillaActual.tablero.casilla[pos_1].id);
+					ret.push(this.casillaActual.tablero.casillas[pos_1].id);
 				} else {
 					// nothing happens because %
 				}
 			} else {
-				ret.push(this.casillaActual.tablero.casilla[pos_1].id);
+				ret.push(this.casillaActual.tablero.casillas[pos_1].id);
 			}
 		}
 		
 
 		// ---------------------------
 
-		if (isNaN(pos_2)) {
-			if (this.casillaActual.tablero.casilla[pos_2].ocupadaNegro()) {
+		if (typeof pos_2 === "string") {
+			if (this.casillaActual.tablero.casillas[pos_2].ocupadaNegro()) {
 				if (this.esBlanco) {
-					ret.push(this.casillaActual.tablero.casilla[pos_2].id);
+					ret.push(this.casillaActual.tablero.casillas[pos_2].id);
 				} else {
 					// nothing happens because i can't eat my own pieces.
 				}
-			} else if (this.casillaActual.tablero.casilla[pos_2].ocupadaBlanco()) {
+			} else if (this.casillaActual.tablero.casillas[pos_2].ocupadaBlanco()) {
 				if (!this.esBlanco) {
-					ret.push(this.casillaActual.tablero.casilla[pos_2].id);
+					ret.push(this.casillaActual.tablero.casillas[pos_2].id);
 				} else {
 					// nothing happens because %
 				}
 			} else {
-				ret.push(this.casillaActual.tablero.casilla[pos_2].id);
+				ret.push(this.casillaActual.tablero.casillas[pos_2].id);
 			}
 		}
 		
 
 		// ---------------------------
 
-		if (isNaN(pos_3)) {
-			if (this.casillaActual.tablero.casilla[pos_3].ocupadaNegro()) {
+		if (typeof pos_3 === "string") {
+			if (this.casillaActual.tablero.casillas[pos_3].ocupadaNegro()) {
 				if (this.esBlanco) {
-					ret.push(this.casillaActual.tablero.casilla[pos_3].id);
+					ret.push(this.casillaActual.tablero.casillas[pos_3].id);
 				} else {
 					// nothing happens because i can't eat my own pieces.
 				}
-			} else if (this.casillaActual.tablero.casilla[pos_3].ocupadaBlanco()) {
+			} else if (this.casillaActual.tablero.casillas[pos_3].ocupadaBlanco()) {
 				if (!this.esBlanco) {
-					ret.push(this.casillaActual.tablero.casilla[pos_3].id);
+					ret.push(this.casillaActual.tablero.casillas[pos_3].id);
 				} else {
 					// nothing happens because %
 				}
 			} else {
-				ret.push(this.casillaActual.tablero.casilla[pos_3].id);
+				ret.push(this.casillaActual.tablero.casillas[pos_3].id);
 			}
 		}
 		
 
 		// ---------------------------
 
-		if (isNaN(pos_4)) {
-			if (this.casillaActual.tablero.casilla[pos_4].ocupadaNegro()) {
+		if (typeof pos_4 === "string") {
+			if (this.casillaActual.tablero.casillas[pos_4].ocupadaNegro()) {
 				if (this.esBlanco) {
-					ret.push(this.casillaActual.tablero.casilla[pos_4].id);
+					ret.push(this.casillaActual.tablero.casillas[pos_4].id);
 				} else {
 					// nothing happens because i can't eat my own pieces.
 				}
-			} else if (this.casillaActual.tablero.casilla[pos_4].ocupadaBlanco()) {
+			} else if (this.casillaActual.tablero.casillas[pos_4].ocupadaBlanco()) {
 				if (!this.esBlanco) {
-					ret.push(this.casillaActual.tablero.casilla[pos_4].id);
+					ret.push(this.casillaActual.tablero.casillas[pos_4].id);
 				} else {
 					// nothing happens because %
 				}
 			} else {
-				ret.push(this.casillaActual.tablero.casilla[pos_4].id);
+				ret.push(this.casillaActual.tablero.casillas[pos_4].id);
 			}
 		}
 
 		// ---------------------------
 
-		if (isNaN(pos_5)) {
-			if (this.casillaActual.tablero.casilla[pos_5].ocupadaNegro()) {
+		if (typeof pos_5 === "string") {
+			if (this.casillaActual.tablero.casillas[pos_5].ocupadaNegro()) {
 				if (this.esBlanco) {
-					ret.push(this.casillaActual.tablero.casilla[pos_5].id);
+					ret.push(this.casillaActual.tablero.casillas[pos_5].id);
 				} else {
 					// nothing happens because i can't eat my own pieces.
 				}
-			} else if (this.casillaActual.tablero.casilla[pos_5].ocupadaBlanco()) {
+			} else if (this.casillaActual.tablero.casillas[pos_5].ocupadaBlanco()) {
 				if (!this.esBlanco) {
-					ret.push(this.casillaActual.tablero.casilla[pos_5].id);
+					ret.push(this.casillaActual.tablero.casillas[pos_5].id);
 				} else {
 					// nothing happens because %
 				}
 			} else {
-				ret.push(this.casillaActual.tablero.casilla[pos_5].id);
+				ret.push(this.casillaActual.tablero.casillas[pos_5].id);
 			}
 		}
 		
 		// ---------------------------
 
-		if (isNaN(pos_6)) {
-			if (this.casillaActual.tablero.casilla[pos_6].ocupadaNegro()) {
+		if (typeof pos_6 === "string") {
+			if (this.casillaActual.tablero.casillas[pos_6].ocupadaNegro()) {
 				if (this.esBlanco) {
-					ret.push(this.casillaActual.tablero.casilla[pos_6].id);
+					ret.push(this.casillaActual.tablero.casillas[pos_6].id);
 				} else {
 					// nothing happens because i can't eat my own pieces.
 				}
-			} else if (this.casillaActual.tablero.casilla[pos_6].ocupadaBlanco()) {
+			} else if (this.casillaActual.tablero.casillas[pos_6].ocupadaBlanco()) {
 				if (!this.esBlanco) {
-					ret.push(this.casillaActual.tablero.casilla[pos_6].id);
+					ret.push(this.casillaActual.tablero.casillas[pos_6].id);
 				} else {
 					// nothing happens because %
 				}
 			} else {
-				ret.push(this.casillaActual.tablero.casilla[pos_6].id);
+				ret.push(this.casillaActual.tablero.casillas[pos_6].id);
 			}
 		}
 
 		// ---------------------------
 
-		if (isNaN(pos_7)) {
-			if (this.casillaActual.tablero.casilla[pos_7].ocupadaNegro()) {
+		if (typeof pos_7 === "string") {
+			if (this.casillaActual.tablero.casillas[pos_7].ocupadaNegro()) {
 				if (this.esBlanco) {
-					ret.push(this.casillaActual.tablero.casilla[pos_7].id);
+					ret.push(this.casillaActual.tablero.casillas[pos_7].id);
 				} else {
 					// nothing happens because i can't eat my own pieces.
 				}
-			} else if (this.casillaActual.tablero.casilla[pos_7].ocupadaBlanco()) {
+			} else if (this.casillaActual.tablero.casillas[pos_7].ocupadaBlanco()) {
 				if (!this.esBlanco) {
-					ret.push(this.casillaActual.tablero.casilla[pos_7].id);
+					ret.push(this.casillaActual.tablero.casillas[pos_7].id);
 				} else {
 					// nothing happens because %
 				}
 			} else {
-				ret.push(this.casillaActual.tablero.casilla[pos_7].id);
+				ret.push(this.casillaActual.tablero.casillas[pos_7].id);
 			}
 		}
 
 		// ---------------------------
 
-		if (isNaN(pos_8)) {
-			if (this.casillaActual.tablero.casilla[pos_8].ocupadaNegro()) {
+		if (typeof pos_8 === "string") {
+			if (this.casillaActual.tablero.casillas[pos_8].ocupadaNegro()) {
 				if (this.esBlanco) {
-					ret.push(this.casillaActual.tablero.casilla[pos_8].id);
+					ret.push(this.casillaActual.tablero.casillas[pos_8].id);
 				} else {
 					// nothing happens because i can't eat my own pieces.
 				}
-			} else if (this.casillaActual.tablero.casilla[pos_8].ocupadaBlanco()) {
+			} else if (this.casillaActual.tablero.casillas[pos_8].ocupadaBlanco()) {
 				if (!this.esBlanco) {
-					ret.push(this.casillaActual.tablero.casilla[pos_8].id);
+					ret.push(this.casillaActual.tablero.casillas[pos_8].id);
 				} else {
 					// nothing happens because %
 				}
 			} else {
-				ret.push(this.casillaActual.tablero.casilla[pos_8].id);
+				ret.push(this.casillaActual.tablero.casillas[pos_8].id);
 			}
 		}
 
-		console.log(ret);
 		return ret;
 	}
 }
