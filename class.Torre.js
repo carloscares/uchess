@@ -219,7 +219,7 @@ class Torre extends Pieza {
   }
 
   cambiarColor(casilla) {
-	document.getElementById(casilla.id).style.backgroundColor = "orange";
+	document.getElementById(casilla.id).style.backgroundColor = "red";
 
 }
 }
