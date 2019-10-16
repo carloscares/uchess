@@ -15,6 +15,7 @@ class Torre extends Pieza {
 		var jugadas = new Array();
 		var posicionActual = this.casillaActual;
 		var tablero = posicionActual.tablero;
+		tablero.cambiaColor();
 		var posiblesPosiciones1 = new Array();
 		var posiblesPosiciones2 = new Array();
 		var posiblesPosiciones3 = new Array();
@@ -49,15 +50,15 @@ class Torre extends Pieza {
 				posiblesPosiciones4.push(pos);
 			}
 		}
-		this.calcularPosiblesPosiciones1(posiblesPosiciones4, jugadas, tablero,condicion);
-		this.calcularPosiblesPosiciones1(posiblesPosiciones2, jugadas, tablero,condicion);
-		this.calcularPosiblesPosiciones2(posiblesPosiciones1, jugadas, tablero,condicion);
-		this.calcularPosiblesPosiciones2(posiblesPosiciones3, jugadas, tablero,condicion);
+		this.calcularPosiblesPosiciones1(posiblesPosiciones4, jugadas, tablero, condicion);
+		this.calcularPosiblesPosiciones1(posiblesPosiciones2, jugadas, tablero, condicion);
+		this.calcularPosiblesPosiciones2(posiblesPosiciones1, jugadas, tablero, condicion);
+		this.calcularPosiblesPosiciones2(posiblesPosiciones3, jugadas, tablero, condicion);
 		console.log(jugadas);
 		return jugadas;
 
 	}
-	calcularPosiblesPosiciones2(posiblesPosiciones, jugadas, tablero,condicion) {
+	calcularPosiblesPosiciones2(posiblesPosiciones, jugadas, tablero, condicion) {
 		for (var i = (posiblesPosiciones.length - 1); i >= 0; i--) {
 			var casilla = tablero.casilla[posiblesPosiciones[i]];
 			if (casilla.estaVacia()) {
@@ -74,7 +75,7 @@ class Torre extends Pieza {
 		}
 
 	}
-	calcularPosiblesPosiciones1(posiblesPosiciones, jugadas, tablero,condicion) {
+	calcularPosiblesPosiciones1(posiblesPosiciones, jugadas, tablero, condicion) {
 		for (var i = 0; i < posiblesPosiciones.length; i++) {
 			var casilla = tablero.casilla[posiblesPosiciones[i]];
 			if (casilla.estaVacia()) {

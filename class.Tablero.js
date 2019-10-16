@@ -25,14 +25,14 @@ class Tablero  {
 		const NEGRO = false;
 
 		//piezas Blancas 
-		var obj = new Torre(BLANCA,this.casilla['a1']);
+		var obj = new Torre(BLANCA,this.casilla['b3']);
 		obj = new Caballo(BLANCO,this.casilla['b1']);
 		obj = new Alfil(BLANCO,this.casilla['c1']);
 		obj = new Dama(BLANCA,this.casilla['d1']);
 		obj = new Rey(BLANCO,this.casilla['e1']);
 		obj = new Alfil(BLANCO,this.casilla['f1']);
 		obj = new Caballo(BLANCO,this.casilla['g1']);
-		obj = new Torre(BLANCA,this.casilla['h1']);
+		obj = new Torre(BLANCA,this.casilla['h5']);
 		//piezas Negras
 		var obj = new Torre(NEGRA,this.casilla['c6']);
 		obj = new Caballo(NEGRO,this.casilla['b8']);
@@ -41,7 +41,7 @@ class Tablero  {
 		obj = new Rey(NEGRO,this.casilla['e8']);
 		obj = new Alfil(NEGRO,this.casilla['f8']);
 		obj = new Caballo(NEGRO,this.casilla['g8']);
-		obj = new Torre(NEGRA,this.casilla['h8']);
+		obj = new Torre(NEGRA,this.casilla['f4']);
 
 		//peones ambos bandos
 		var idx;
@@ -100,6 +100,20 @@ class Tablero  {
 		}
 		document.writeln('<td></td></tr>');
 		document.writeln('</table>')
+	}
+	cambiaColor(){
+		var idx,col;
+		var letra = ['a','b','c','d','e','f','g','h'];
+		for(var i=8 ; i>0 ; i--){
+		for(var j=0; j<8 ; j++){
+			if((i+j)%2==0)
+				col = this.colorCasillaClara;
+			else
+				col = this.colorCasillaOscura;
+			idx = letra[j]+i;
+			document.getElementById(idx).style.backgroundColor=col;
+		}
+	}
 	}
 }
 
