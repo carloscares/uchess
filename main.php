@@ -17,4 +17,9 @@ include_once 'class.Rey.js';
 
 tab = new Partida('juan','alberto');
 tab.tableroActual().despliega();
+document.writeln('<input type="button" onclick="tab.tableroActual().mostrarPosibles()" value="Posibles jugadas"/>');
+document.writeln('<textarea id="textarea" rows="2" cols="30">b1</textarea>');
+document.writeln('<div id ="posiblesJugadas"></div>');
+
+
 </script>
