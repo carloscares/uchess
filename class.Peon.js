@@ -6,7 +6,7 @@ class Peon extends Pieza {
 
 	despliega() {
 
-		if(this.esBlancoo())
+		if(this.esBlanco())
 			return '\u2659';
 		else
 			return '\u265F';
