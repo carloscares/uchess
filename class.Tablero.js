@@ -29,7 +29,7 @@ class Tablero {
     obj = new Dama(BLANCA, this.casilla["d1"]);
     obj = new Rey(BLANCO, this.casilla["e1"]);
     obj = new Alfil(BLANCO, this.casilla["f1"]);
-    obj = new Caballo(BLANCO, this.casilla["g1"]);
+    obj = new Caballo(BLANCO, this.casilla["b4"]);
     obj = new Torre(BLANCA, this.casilla["h1"]);
 
     //piezas Negras
@@ -38,7 +38,7 @@ class Tablero {
     obj = new Alfil(NEGRO, this.casilla["c8"]);
     obj = new Dama(NEGRA, this.casilla["d8"]);
     obj = new Rey(NEGRO, this.casilla["e8"]);
-    obj = new Alfil(NEGRO, this.casilla["f8"]);
+    obj = new Alfil(NEGRO, this.casilla["g1"]);
     obj = new Caballo(NEGRO, this.casilla["f4"]);
     obj = new Torre(NEGRA, this.casilla["h4"]);
 
