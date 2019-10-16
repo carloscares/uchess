@@ -18,3 +18,14 @@ include_once 'class.Rey.js';
 tab = new Partida('juan','alberto');
 tab.tableroActual().despliega();
 </script>
+<script>
+    function jugar(){
+        var pos = document.getElementById("texto").value;
+        document.getElementById("jugadas").innerHTML = tab.tableroActual().casilla[pos].pieza.puedeJugar();
+    }
+</script>
+<body>
+<input type='button' value='Ver jugadas torre' onclick='jugar()'>
+<input type="text" id="texto">
+<div id="jugadas"></div>
+</body>
