@@ -7,9 +7,9 @@ class Dama extends Pieza {
 	despliega() {
 
 		if(this.esBlanca())
-			return "D-B";
+			return '\u2655';
 		else
-			return "D-N";
+			return '\u265B';
 	}
 }
 

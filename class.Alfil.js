@@ -1,15 +1,15 @@
 class Alfil extends Pieza {
 
-	constructor(trueSiBlanca,casillaContenedora){
-		super(trueSiBlanca,casillaContenedora);
+	constructor(trueSiBlanca, casillaContenedora) {
+		super(trueSiBlanca, casillaContenedora);
 	}
 
 	despliega() {
 
-		if(this.esBlanco())
-			return "A-B";
+		if (this.esBlanco())
+			return '\u2657';
 		else
-			return "A-N";
+			return '\u265D';
 	}
 }
 

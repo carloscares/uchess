@@ -7,9 +7,9 @@ class Caballo extends Pieza {
 	despliega() {
 
 		if(this.esBlanco())
-			return "C-B";
+			return '\u2658';
 		else
-			return "C-N";
+			return '\u265E';
 	}
 }
 

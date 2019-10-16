@@ -7,9 +7,9 @@ class Rey extends Pieza {
 	despliega() {
 
 		if(this.esBlanco())
-			return "R-B";
+			return '\u2654';
 		else
-			return "R-N";
+			return '\u265A';
 	}
 }
 

@@ -7,9 +7,9 @@ class Peon extends Pieza {
 	despliega() {
 
 		if(this.esBlanco())
-			return "P-B";
+			return '\u2659';
 		else
-			return "P-N";
+			return '\u265F';
 	}
 }
 
