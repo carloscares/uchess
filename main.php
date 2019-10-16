@@ -24,7 +24,7 @@ tab.tableroActual().despliega();
 <script>
 function init(){
 	var di = document.getElementById("pos");
-	var resul = tab.tableroActual().casilla['c3'].pieza.mostrarPosibles();
+	var resul = tab.tableroActual().casilla['c5'].pieza.mostrarPosibles();
 	di.innerHTML = resul;
 }
 
@@ -54,7 +54,7 @@ function mostrarPosible(posObjetivo){
 <body>
 <div>
 	<input id="coordenada" type="text">
-	<input type="button" value="Analizar" onclick="mostrarPosible('c3')">
+	<input type="button" value="Analizar" onclick="mostrarPosible('c5')">
 </div>	
 <div id="pos" >	</div>
 </body>

@@ -25,8 +25,8 @@ class Tablero  {
 
 		//piezas Blancas 
 		var obj;
-		obj = new Caballo(BLANCO,this.casilla['c3']);
-		this.casilla['c3'].ocupar(obj);
+		obj = new Caballo(BLANCO,this.casilla['c5']);
+		this.casilla['c5'].ocupar(obj);
 		obj.mostrarPosibles("pos");
 
 
