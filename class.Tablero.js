@@ -124,14 +124,29 @@ class Tablero  {
 
 	mostrarPosibles(){
 		let id = document.getElementById("textarea").value;
-		if(this.casilla[id].pieza){
-			this.resetearColoresCasillas();
-			document.getElementById("posiblesJugadas").value = this.casilla[id].pieza.puedeJugar();
-			let split = this.casilla[id].pieza.puedeJugar().split(" ");
-			for(let i in split){
-				document.getElementById(split[i]).style.background = "#ff951b";
-			}
+		let posibles
+		if(this.casilla[id].pieza) {
+			posibles = this.casilla[id].pieza.puedeJugar();
 		}
+		else
+			posibles = null;
+		if(posibles != null){
+			if(this.casilla[id].pieza){
+				this.resetearColoresCasillas();
+				document.getElementById("posiblesJugadas").value = posibles;
+				let split = posibles.split(" ");
+				for(let i in split){
+					if(split !== null) {
+						if (document.getElementById(split[i])!=null) {
+							document.getElementById(split[i]).style.background = "#ff951b";
+						}
+					}
+				}
+			}
+		}else{
+			document.getElementById("posiblesJugadas").innerText = "No esta implementado";
+		}
+
 	}
 
 	resetearColoresCasillas(){

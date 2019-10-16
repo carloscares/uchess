@@ -9,7 +9,7 @@ class Pieza {
 
     //abstract
     puedeJugar(){
-
+        return null;
     }
 
     esBlanco(){
