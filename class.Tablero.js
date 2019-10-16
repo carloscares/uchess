@@ -1,8 +1,8 @@
 class Tablero  {
 
 	constructor(unaPartida) {
-		this.colorCasillaClara ="#FFDA33";
-		this.colorCasillaOscura = "#120351";
+		this.colorCasillaClara ="#F69E9E";
+		this.colorCasillaOscura = "#F91717";
 		this.colorPiezaClara = "#a2a2a2";
 		this.colorPiezaOscura = "#666690";
 		this.casilla = new Array();
@@ -24,52 +24,24 @@ class Tablero  {
 		const NEGRO = false;
 
 		//piezas Blancas 
-		var obj = new Torre(BLANCA,this);
-		this.casilla['a1'].ocupar(obj);
-		obj = new Caballo(BLANCO,this);
-		this.casilla['b1'].ocupar(obj);
-		obj = new Alfil(BLANCO,this);
-		this.casilla['c1'].ocupar(obj);
-		obj = new Dama(BLANCA,this);
-		this.casilla['d1'].ocupar(obj);
-		obj = new Rey(BLANCO,this);
-		this.casilla['e1'].ocupar(obj);
-		obj = new Alfil(BLANCO,this);
-		this.casilla['f1'].ocupar(obj);
-		obj = new Caballo(BLANCO,this);
-		this.casilla['g1'].ocupar(obj);
-		obj = new Torre(BLANCA,this);
-		this.casilla['h1'].ocupar(obj);
-		
-		//piezas Negras
-		var obj = new Torre(NEGRA,this);
-		this.casilla['a8'].ocupar(obj);
-		obj = new Caballo(NEGRO,this);
-		this.casilla['b8'].ocupar(obj);
-		obj = new Alfil(NEGRO,this);
-		this.casilla['c8'].ocupar(obj);
-		obj = new Dama(NEGRA,this);
-		this.casilla['d8'].ocupar(obj);
-		obj = new Rey(NEGRO,this);
-		this.casilla['e8'].ocupar(obj);
-		obj = new Alfil(NEGRO,this);
-		this.casilla['f8'].ocupar(obj);
-		obj = new Caballo(NEGRO,this);
-		this.casilla['g8'].ocupar(obj);
-		obj = new Torre(NEGRA,this);
-		this.casilla['h8'].ocupar(obj);
+		var obj;
+		obj = new Caballo(BLANCO,this.casilla['c3']);
+		this.casilla['c3'].ocupar(obj);
+		obj.mostrarPosibles("pos");
+
 
 		//peones ambos bandos
 		var idx;
 		var letra = ['a','b','c','d','e','f','g','h'];
 		for(var k=0; k<letra.length ; k++){
 			idx = letra[k]+2;
-			obj = new Peon(BLANCO,this);
+			obj = new Peon(BLANCO,this.casilla[idx]);
 			this.casilla[idx].ocupar(obj);
 			idx = letra[k]+7;
-			obj = new Peon(NEGRO,this);
+			obj = new Peon(NEGRO,this.casilla[idx]);
 			this.casilla[idx].ocupar(obj);
 		}
+
 
 
 
@@ -101,7 +73,7 @@ class Tablero  {
 					col = this.colorCasillaClara;
 				else
 					col = this.colorCasillaOscura;
-				document.write('<td height="40" style="background-color:'+col+'">');
+				document.write('<td id=\"'+letra[j]+i+'\"  height="40" style="background-color:'+col+'">');
 				idx = letra[j]+i;
 				document.write(this.casilla[idx].despliega());
 				document.writeln('</td>');
